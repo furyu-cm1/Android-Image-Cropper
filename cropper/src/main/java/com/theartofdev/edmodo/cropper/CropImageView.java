@@ -797,7 +797,7 @@ public class CropImageView extends FrameLayout {
         if (mOnCropImageCompleteListener == null) {
             throw new IllegalArgumentException("mOnCropImageCompleteListener is not set");
         }
-        startCropWorkerTask(reqWidth, reqHeight, options, null, null, 0);
+        startCropWorkerTask(reqWidth, reqHeight, options, null, null, 100);
     }
 
     /**
@@ -808,7 +808,7 @@ public class CropImageView extends FrameLayout {
      * @param saveUri the Android Uri to save the cropped image to
      */
     public void saveCroppedImageAsync(Uri saveUri) {
-        saveCroppedImageAsync(saveUri, Bitmap.CompressFormat.JPEG, 90, 0, 0, RequestSizeOptions.NONE);
+        saveCroppedImageAsync(saveUri, Bitmap.CompressFormat.JPEG, 100, 0, 0, RequestSizeOptions.NONE);
     }
 
     /**

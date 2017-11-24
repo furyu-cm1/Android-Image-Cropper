@@ -327,7 +327,7 @@ public class CropImageOptions implements Parcelable {
 
         outputUri = Uri.EMPTY;
         outputCompressFormat = Bitmap.CompressFormat.JPEG;
-        outputCompressQuality = 90;
+        outputCompressQuality = 100;
         outputRequestWidth = 0;
         outputRequestHeight = 0;
         outputRequestSizeOptions = CropImageView.RequestSizeOptions.NONE;
