@@ -98,22 +98,7 @@ final class BitmapUtils {
      * New bitmap is created and the old one is recycled.
      */
     static RotateBitmapResult rotateBitmapByExif(Bitmap bitmap, ExifInterface exif) {
-        int degrees;
-        int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
-        switch (orientation) {
-            case ExifInterface.ORIENTATION_ROTATE_90:
-                degrees = 90;
-                break;
-            case ExifInterface.ORIENTATION_ROTATE_180:
-                degrees = 180;
-                break;
-            case ExifInterface.ORIENTATION_ROTATE_270:
-                degrees = 270;
-                break;
-            default:
-                degrees = 0;
-                break;
-        }
+        int degrees = 0;
         return new RotateBitmapResult(bitmap, degrees);
     }
 
